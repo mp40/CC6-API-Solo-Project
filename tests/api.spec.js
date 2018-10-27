@@ -18,12 +18,20 @@ describe("The API server", () => {
   });
 
   describe("GET /", () => {
-    it("should return list of beers'", async () => {
+    it("should return list of beers", async () => {
       const res = await request.get("/");
       res.should.be.json;
       JSON.parse(res.text).should.deep.equal({
         results: beers
       });
+    });
+  });
+
+  describe("GET /1", () => {
+    it("should return a beer matching id 1", async () => {
+      const res = await request.get("/1");
+      res.should.be.json;
+      JSON.parse(res.text).should.deep.equal(beers[0]);
     });
   });
 });

@@ -1,6 +1,7 @@
 //array of beers to be used to database
 
 const yebisu = {
+  id: 1,
   name: "Yebisu",
   abv: 5,
   can500: 314,
@@ -9,6 +10,7 @@ const yebisu = {
 };
 
 const asahi = {
+  id: 2,
   name: "Asahi Super Dry",
   abv: 5,
   can500: 271,
@@ -17,6 +19,7 @@ const asahi = {
 };
 
 const sapporo = {
+  id: 3,
   name: "Sapporo",
   abv: 5,
   can500: 271,
@@ -25,6 +28,7 @@ const sapporo = {
 };
 
 const kirinIchi = {
+  id: 4,
   name: "Kirin Ichiban",
   abv: 5,
   can500: 271,
@@ -33,6 +37,7 @@ const kirinIchi = {
 };
 
 const kirinGreen = {
+  id: 5,
   name: "Kirin Green Label",
   abv: 4.5,
   can500: 212,
@@ -41,6 +46,7 @@ const kirinGreen = {
 };
 
 const malts = {
+  id: 6,
   name: "Premium Malts",
   abv: 5.5,
   can500: 321,
@@ -49,6 +55,7 @@ const malts = {
 };
 
 const nodogoshi = {
+  id: 7,
   name: "Kirin Nodogoshi",
   abv: 5,
   can500: 188,

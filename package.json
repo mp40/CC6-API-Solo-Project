@@ -6,7 +6,8 @@
   "author": "mp40 <philps.matthew@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "eslint --fix . && mocha ./tests/**/*spec.js"
+    "test": "eslint --fix . && mocha ./tests/**/*spec.js",
+    "start": "node ./runServer.js"
   },
   "devDependencies": {
     "chai": "^4.2.0",
