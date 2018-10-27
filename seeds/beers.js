@@ -1,11 +1,11 @@
-const {
-  beers
-} = require("../seedBeers");
-exports.seed = function (knex, Promise) {
+const { beers } = require("../seedBeers");
+// eslint-disable-next-line no-unused-vars
+exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('beers').del()
-    .then(function () {
+  return knex("beers")
+    .del()
+    .then(() => {
       // Inserts seed entries
-      return knex('beers').insert(beers);
+      return knex("beers").insert(beers);
     });
 };
