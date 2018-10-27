@@ -1,0 +1,8 @@
+{
+  "name": "CC6-API-Solo-Project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mp40/CC6-API-Solo-Project.git",
+  "author": "mp40 <philps.matthew@gmail.com>",
+  "license": "MIT"
+}
