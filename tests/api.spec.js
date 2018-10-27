@@ -1,10 +1,13 @@
 //Tests for API project
 
-const { setupExpressServer } = require("..");
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 chai.use(chaiHttp);
 chai.should();
+
+const { beers } = require("../seedBeers");
+
+const { setupExpressServer } = require("..");
 
 const app = setupExpressServer();
 
@@ -14,11 +17,13 @@ describe("The API server", () => {
     request = chai.request(app);
   });
 
-  describe("GET /hello - returning text", () => {
-    it("should return the text/html 'world'", async () => {
-      const res = await request.get("/hello");
-      res.should.be.html;
-      res.text.should.equal("world");
+  describe("GET /", () => {
+    it("should return list of beers'", async () => {
+      const res = await request.get("/");
+      res.should.be.json;
+      JSON.parse(res.text).should.deep.equal({
+        results: beers
+      });
     });
   });
 });
