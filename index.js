@@ -30,6 +30,13 @@ app.get("/beers/:id", (req, res) => {
   });
 });
 
+app.post("/beers", (req, res) => {
+  db.addBeer(req.body).then(beer => {
+    //any json that goes in lives in body
+    res.send(beer);
+  });
+});
+
 module.exports = {
   setupExpressServer
 };

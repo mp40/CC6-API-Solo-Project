@@ -6,6 +6,16 @@ exports.seed = function(knex, Promise) {
     .del()
     .then(() => {
       // Inserts seed entries
-      return knex("beers").insert(beers);
+      return knex("beers").insert(
+        beers.map(beer => {
+          return {
+            name: beer.name,
+            abv: beer.abv,
+            can500: beer.can500,
+            can350: beer.can350,
+            drinkable: beer.drinkable
+          };
+        })
+      );
     });
 };

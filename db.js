@@ -8,6 +8,13 @@ const getBeers = function() {
     .table("beers");
 };
 
+const addBeer = function(beer) {
+  return knex("beers")
+    .insert(beer)
+    .returning("*");
+};
+
 module.exports = {
-  getBeers
+  getBeers,
+  addBeer
 };
