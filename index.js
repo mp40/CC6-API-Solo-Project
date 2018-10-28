@@ -1,6 +1,6 @@
 // set up server
 const express = require("express"); //set up express
-const { getBeers } = require("./db");
+const db = require("./db");
 const app = express();
 app.use(express.json()); //use express with built in body-parser
 const path = require("path"); //built into node
@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/beers", (req, res) => {
-  getBeers().then(beers => {
+  db.getBeers().then(beers => {
     res.send({
       results: beers
     });
@@ -21,7 +21,7 @@ app.get("/beers", (req, res) => {
 });
 
 app.get("/beers/:id", (req, res) => {
-  getBeers().then(beers => {
+  db.getBeers().then(beers => {
     res.send(
       beers.find(beer => {
         return beer.id === Number(req.params.id); //first beer with matching id returned
