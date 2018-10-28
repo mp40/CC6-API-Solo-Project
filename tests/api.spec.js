@@ -17,9 +17,9 @@ describe("The API server", () => {
     request = chai.request(app);
   });
 
-  describe("GET /", () => {
+  describe("GET /beers", () => {
     it("should return list of beers", async () => {
-      const res = await request.get("/");
+      const res = await request.get("/beers");
       res.should.be.json;
       JSON.parse(res.text).should.deep.equal({
         results: beers
@@ -27,9 +27,9 @@ describe("The API server", () => {
     });
   });
 
-  describe("GET /1", () => {
+  describe("GET /beers/1", () => {
     it("should return a beer matching id 1", async () => {
-      const res = await request.get("/1");
+      const res = await request.get("/beers/1");
       res.should.be.json;
       JSON.parse(res.text).should.deep.equal(beers[0]);
     });
