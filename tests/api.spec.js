@@ -21,7 +21,7 @@ describe("The API server", () => {
   let req;
   beforeEach(() => {
     req = chai.request(app);
-    sandbox.spy(db, "getBeers");
+    sandbox.stub(db, "getBeers").returns(Promise.resolve(beers)); //promise auto resolves beers
   });
   afterEach(() => {
     //db.getBeers.calls.restore();
