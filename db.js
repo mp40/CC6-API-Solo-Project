@@ -20,8 +20,15 @@ const deleteBeer = function(id) {
     .del();
 };
 
+const updateBeer = function(id, updatedBeer) {
+  return knex("beers")
+    .where("id", id)
+    .update(updatedBeer);
+};
+
 module.exports = {
   getBeers,
   addBeer,
-  deleteBeer
+  deleteBeer,
+  updateBeer
 };

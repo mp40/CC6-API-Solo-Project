@@ -90,4 +90,23 @@ describe("The API server", () => {
       res.should.be.ok;
     });
   });
+
+  describe("PUT /beers/:id", () => {
+    it("should update a beer", async () => {
+      const kirinTest = {
+        name: "Kirin Test Label",
+        abv: 4.5,
+        can500: 212,
+        can350: 154,
+        drinkable: false
+      };
+
+      sandbox
+        .stub(db, "updateBeer")
+        .withArgs(8, kirinTest)
+        .returns(Promise.resolve());
+      const res = await req.put("/beers/8").send(kirinTest);
+      res.should.be.ok;
+    });
+  });
 });

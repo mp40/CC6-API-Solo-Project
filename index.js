@@ -43,6 +43,12 @@ app.delete("/beers/:id", (req, res) => {
   });
 });
 
+app.put("/beers/:id", (req, res) => {
+  db.updateBeer(Number(req.params.id), req.body).then(() => {
+    res.send();
+  });
+});
+
 module.exports = {
   setupExpressServer
 };
