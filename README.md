@@ -3,7 +3,7 @@ This was created during my time as a student at Code Chrysalis
 
 A database of common “combini” beers found in Japanese convenience stores.
 
-It sores the following data:
+It stores the following data:
 
 * Name of beer, as string
 * ABV, as float
