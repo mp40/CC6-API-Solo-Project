@@ -20,11 +20,11 @@ The API returns the following beer object.
   "can500": 314,
   "can350": 242,
   "drinkable": true
-};
+}
 ```
 ## Install procedure
 To set up database enter following in terminal.
-It assumes database named `beers` created user postgres, no password
+It assumes database named `beers` created user postgres, no password. See `knexfile.js` if you want to modify database details.
 
 ```
 yarn migrate
