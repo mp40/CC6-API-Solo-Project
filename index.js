@@ -37,6 +37,12 @@ app.post("/beers", (req, res) => {
   });
 });
 
+app.delete("/beers/:id", (req, res) => {
+  db.deleteBeer(Number(req.params.id)).then(() => {
+    res.send();
+  });
+});
+
 module.exports = {
   setupExpressServer
 };

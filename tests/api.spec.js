@@ -79,4 +79,15 @@ describe("The API server", () => {
       JSON.parse(res.text).should.deep.equal(addedBeer);
     });
   });
+
+  describe("DELETE /beers/:id", () => {
+    it("should delete a beer", async () => {
+      sandbox
+        .stub(db, "deleteBeer")
+        .withArgs(8)
+        .returns(Promise.resolve());
+      const res = await req.delete("/beers/8").send();
+      res.should.be.ok;
+    });
+  });
 });

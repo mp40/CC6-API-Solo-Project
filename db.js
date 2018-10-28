@@ -14,7 +14,14 @@ const addBeer = function(beer) {
     .returning("*");
 };
 
+const deleteBeer = function(id) {
+  return knex("beers")
+    .where("id", id)
+    .del();
+};
+
 module.exports = {
   getBeers,
-  addBeer
+  addBeer,
+  deleteBeer
 };
