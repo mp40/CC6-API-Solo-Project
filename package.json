@@ -17,8 +17,8 @@
     "chai-http": "^4.2.0",
     "chai-spies": "^1.0.0",
     "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-config-problems": "^3.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-problems": "^4.0.0",
     "eslint-plugin-prettier": "^3.1.2",
     "mocha": "^7.0.1",
     "prettier": "^1.14.3",
@@ -28,6 +28,6 @@
   "dependencies": {
     "express": "^4.16.4",
     "knex": "^0.20.8",
-    "pg": "^7.17.1"
+    "pg": "^7.18.1"
   }
 }
